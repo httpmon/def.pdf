@@ -10,7 +10,9 @@
 \tableofcontents
 
 \section{Introduction}
-Design and implement a service with Golang programming language to monitor HTTP endpoints so that in some configurable periods (e.g., the 30s, 1m, 5m) this service sends HTTP requests to the endpoint and logs the response status code and registers an alert for that URL. Each URL must have an error threshold that indicates the maximum error count after which the service must trigger an alert for the user who the URL belongs to.
+Design and implement a service with Golang programming language to monitor HTTP endpoints so that in some configurable periods (e.g., the 30s, 1m, 5m)
+this service sends HTTP requests to the endpoint and logs the response status code and registers an alert for that URL.
+Each URL must have an error threshold that indicates the maximum error count after which the service must trigger an alert for the user who the URL belongs to.
 
 Successful HTTP call is indicated by an HTTP OK \textit{2XX} status code and the failed call is indicated by a \textit{non-2XX} status code.
 
@@ -25,7 +27,7 @@ Use JWT Tokens for authenticating users
 \subsection{Users}
 This application needs simple user management and authentication so that users can register and receive a token in order to be able to use other endpoints to create URL, update URL, get the stats of the URLs and also get alerts for their URLs.
 
-\subsection{Endpoints}
+\subsubsection{Users Endpoints}
 \begin{itemize}
   \item Create a new user (public endpoint)
   \item Generate Token for the user (public endpoint)
