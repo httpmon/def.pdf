@@ -12,14 +12,11 @@
 \section{Introduction}
 Design and implement a service with Golang programming language to monitor HTTP endpoints so that in some configurable periods (e.g., the 30s, 1m, 5m) this service sends HTTP requests to the endpoint and logs the response status code and registers an alert for that URL. Each URL must have an error threshold that indicates the maximum error count after which the service must trigger an alert for the user who the URL belongs to.
 
-Successful HTTP call is indicated by an HTTP OK 2XX status code and the failed call is indicated by a non-2XX status code.
-
+Successful HTTP call is indicated by an HTTP OK \textit{2XX} status code and the failed call is indicated by a \textit{non-2XX} status code.
 
 \section{Database}
 
 Feel free to use any kind of database you want.
-
-
 
 \section{Design and develop a RESTFul API with the following features}
 \subsection{Authentication}
@@ -34,24 +31,29 @@ This application needs simple user management and authentication so that users c
   \item Generate Token for the user (public endpoint)
 \end{itemize}
 
-URLs
+\subsection{URLs}
 Each URL must have a threshold parameter that indicates the maximum error count which service must trigger and create an alert after that threshold.
 
-Each user can create up to 20 URLs.
+Each user can create up to \textit{20} URLs.
 
-URL Endpoints
-Create a new URL (auth-required)
-List URLs by the user (auth-required)
-Get statistics for a specific URL by day (successes and failures). For example, count of successful call and failed call during today (auth-required)
+\subsubsection{URL Endpoints}
+\begin{itemize}
+  \item Create a new URL (auth-required)
+  \item List URLs by the user (auth-required)
+  \item Get statistics for a specific URL by day (successes and failures). For example, count of successful call and failed call during today (auth-required)
+\end{itemize}
 
-Alerts
-Each time the number of errors exceeds the error threshold service must register a new alert for that URL. Users must be able to get the alerts for their URLs.
+\subsection{Alerts}
+Each time the number of errors exceeds the error threshold service must register a new alert for that URL.
+Users must be able to get the alerts for their URLs.
 
-Alert Endpoint
-Get Alerts for a specific URL (auth-required)
+\subsubsection{Alert Endpoint}
+\begin{itemize}
+  \item Get Alerts for a specific URL (auth-required)
+\end{itemize}
 
 
-Notice: The public endpoints are accessible by everyone and auth-required endpoints need the token for authentication
+Notice: The public endpoints are accessible by everyone and auth-required endpoints need the token for authentication.
 
 \section{Instructions}
 
@@ -65,15 +67,6 @@ Please create a GitHub repository and share it with us as soon as you started wo
   \item We don’t need 100\% test coverage but do your best to write some tests for important parts of the application
   \item Write some documentation about your service in a file called README.md
 \end{itemize}
-
-After you finished working on the assignment please send us an email with the following information:
-
-How much time you put on this assignment
-What did you learn by working on this assignment
-
-
-Please be prepared to answer the follow-up question and don’t hesitate to ask any questions you may have.
-
 
 Good Luck!
 Snapp! Team
